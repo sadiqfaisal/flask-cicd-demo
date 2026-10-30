@@ -1,4 +1,4 @@
-﻿from flask import Flask, jsonify, render_template_string
+from flask import Flask, jsonify, render_template_string
 from datetime import datetime, timezone
 import os
 import platform
@@ -294,7 +294,7 @@ h1 {font-size:clamp(27px,3.4vw,40px);letter-spacing:-2px;line-height:1.15;margin
         <div class="breadcrumb">Workspace / <b>Command Center</b></div>
         <div class="top-actions">
             <div class="clock" id="clock">--:--:--</div>
-            <div class="live-pill"><span class="dot"></span> LOCAL APP ONLINE</div>
+            <div class="live-pill"><span class="dot"></span> APPLICATION ONLINE</div>
             <button class="refresh" onclick="refreshDashboard()">↻ Refresh</button>
         </div>
     </header>
@@ -348,8 +348,8 @@ h1 {font-size:clamp(27px,3.4vw,40px);letter-spacing:-2px;line-height:1.15;margin
                 <div class="metric-title">DEPLOYMENT</div>
                 <div class="metric-icon orange">⇧</div>
             </div>
-            <div class="metric-value orange" style="font-size:20px">NOT CONNECTED</div>
-            <div class="metric-note">Cloud deployment not configured</div>
+            <div class="metric-value orange" style="font-size:20px">DEPLOYED</div>
+            <div class="metric-note">Hosted on Render</div>
         </div>
     </section>
 
@@ -389,7 +389,7 @@ h1 {font-size:clamp(27px,3.4vw,40px);letter-spacing:-2px;line-height:1.15;margin
             <div class="pipeline-note">
                 <strong>Workflow:</strong> A GitHub push triggers the automation.
                 GitHub Actions installs dependencies, runs tests and builds a Docker image.
-                Image publishing and cloud deployment require additional configuration.
+                Render hosts the live application separately using its GitHub auto-deploy integration.
             </div>
         </div>
 
@@ -397,7 +397,7 @@ h1 {font-size:clamp(27px,3.4vw,40px);letter-spacing:-2px;line-height:1.15;margin
             <div class="panel-heading">
                 <div>
                     <h2>WORKFLOW ACTIVITY</h2>
-                    <p>Configured automation stages</p>
+                    <p>Steps performed by the GitHub Actions workflow</p>
                 </div>
                 <div class="tag">PIPELINE</div>
             </div>
